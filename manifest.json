@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Domain Locker",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "domainblocker@local"
+    }
+
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "permissions": ["declarativeNetRequest"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "block_rules",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
